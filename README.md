@@ -1,2 +1,2 @@
 # SEPNet
-The official repository for the article 'Polyp Segmentation via Semantic Enhanced Perceptual Network'
+Once our work is officially accepted, we will promptly update and enrich the contents of the repository.
