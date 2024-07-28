@@ -1,7 +1,7 @@
 # SEPNet
 
 ## News
-[Jul/24/2024] 💥 [Our paper](https://ieeexplore.ieee.org/document/10608167) has been accepted by IEEE Transactions on Circuits and Systemsfor Video Technology (IEEE-TCSVT).
+[Jul/24/2024] 💥 [Our paper](https://ieeexplore.ieee.org/document/10608167) has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
 
 ## Code
 🔥We will promptly update and enrich the contents of the repository.
