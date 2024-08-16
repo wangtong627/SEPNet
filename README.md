@@ -71,12 +71,12 @@ The structure of the project is as follows.
 - downloading **training dataset**, which can be found in this [Google Drive Link (399.5MB)](https://drive.google.com/file/d/1YiGHLw4iTvKdvbT6MgwO9zcCv8zJ_Bnb/view?usp=sharing). It contains two sub-datasets: Kvasir-SEG (900 train samples) and CVC-ClinicDB (550 train samples).
 
 ## Weight 
-- During training, it is necessary to load the pre-trained parameters of the backbone network, and the weights of PVT-V2-B2 can be downloaded from *[**here***](https://pan.seu.edu.cn:443/#/link/0775D9F57116CE2267D091181D1C86E7).
+- During training, it is necessary to load the pre-trained parameters of the backbone network, and the weights of PVT-V2-B2 can be downloaded from [**here**](https://pan.seu.edu.cn:443/#/link/0775D9F57116CE2267D091181D1C86E7).
 
-- You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at  *[**here***](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334).
+- You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334).
 
 ## Prediction Results
-- The prediction map of our proposed SEPNet can be downloaded at  *[**here***](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294).
+- The prediction map of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294).
 
 ## Citation
 
