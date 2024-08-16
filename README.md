@@ -1,6 +1,6 @@
 # <p align=center>`SEPNet (IEEE TCSVT 2024)`</p><!-- omit in toc -->
 
-## Preface
+<!-- ## Preface -->
 
 - This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" IEEE TCSVT-2024.
 - You can find our paper at [**here**](https://ieeexplore.ieee.org/document/10608167).
