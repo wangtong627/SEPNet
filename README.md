@@ -19,7 +19,7 @@ To address this issue, we propose a novel semantic enhanced perceptual network (
 Additionally, we propose a Multi-scale Adaptive Perception (MAP) module, which enhances the flexibility of receptive fields by increasing the interaction of information between neighboring receptive field branches and dynamically adjusting the size of the perception domain based on the contribution of each scale branch.
 Finally, we construct the Contextual Representation Calibration (CRC) module, which calibrates contextual representations by introducing an additional branch network to supplement details.
 
-Extensive experiments demonstrate that SEPNet outperforms 15 \sArt methods on five challenging datasets across six standard metrics.
+Extensive experiments demonstrate that SEPNet outperforms 15 sota methods on five challenging datasets across six standard metrics.
 
 ### Qualitative Results
 
