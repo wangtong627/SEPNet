@@ -22,7 +22,7 @@ Extensive experiments demonstrate that SEPNet outperforms 15 \sArt methods on fi
 ### Qualitative Results
 
 ![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
-_Figure 2: Qualitative Results._
+_Figure: Qualitative Results._
 
 ## Code
 
