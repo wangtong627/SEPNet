@@ -3,14 +3,15 @@
 <!-- ## Preface -->
 
 - This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" IEEE TCSVT-2024.
-- You can find our paper at [**here**](https://ieeexplore.ieee.org/document/10608167).
+- Our paper is available at [**here**](https://ieeexplore.ieee.org/document/10608167).
 - If you have any questions about our paper, feel free to contact me.
 >  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm).
 
 ## News
 
 - [Aug/16/2024] We have open-sourced the model's weight and prediction results. 
-- [Jul/24/2024] Our paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
+- [Jul/24/2024] Our paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT).
+
 ## Overview
 
 ### Introduction
