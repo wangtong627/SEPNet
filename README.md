@@ -1,3 +1,4 @@
+
 ## Preface
 
 - This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" TCSVT-2024. 
@@ -6,6 +7,22 @@
 
 - [Aug/16/2024] We have open-sourced the model's weight and prediction results. 
 - [Jul/24/2024] 💥 [Our paper](https://ieeexplore.ieee.org/document/10608167) has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
+## Overview
+
+### Introduction
+
+Accurate polyp segmentation is crucial for precise diagnosis and prevention of colorectal cancer. However, precise polyp segmentation still faces challenges, mainly due to the similarity of polyps to their surroundings in terms of color, shape, texture, and other aspects, making it difficult to learn accurate semantics.
+
+To address this issue, we propose a novel semantic enhanced perceptual network (SEPNet) for polyp segmentation, which enhances polyp semantics to guide the exploration of polyp features. Specifically, we propose the Polyp Semantic Enhancement (PSE) module, which utilizes a coarse segmentation map as a basis and selects kernels to extract semantic information from corresponding regions, thereby enhancing the discriminability of polyp features highly similar to the background. Furthermore, we design a plug-and-play semantic guidance structure for the PSE, leveraging accurate semantic information to guide scale perception and context fusion, thereby enhancing feature discriminability.
+Additionally, we propose a Multi-scale Adaptive Perception (MAP) module, which enhances the flexibility of receptive fields by increasing the interaction of information between neighboring receptive field branches and dynamically adjusting the size of the perception domain based on the contribution of each scale branch.
+Finally, we construct the Contextual Representation Calibration (CRC) module, which calibrates contextual representations by introducing an additional branch network to supplement details.
+
+Extensive experiments demonstrate that SEPNet outperforms 15 \sArt methods on five challenging datasets across six standard metrics.
+
+### Qualitative Results
+
+[![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
+_Figure 2: Qualitative Results._
 
 ## Code
 
@@ -68,3 +85,4 @@ year={2024},
 publisher={IEEE}
 }
 ```
+
