@@ -76,7 +76,7 @@ The structure of the project is as follows.
 - You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334).
 
 ## Prediction Results
-- The prediction map of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294).
+- You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294).
 
 ## Citation
 
