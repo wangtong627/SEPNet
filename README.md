@@ -1,10 +1,61 @@
-# SEPNet
+## Preface
 
+- This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" TCSVT-2024. 
+- If you have any questions about our paper, feel free to contact me. 
 ## News
-[Jul/24/2024] 💥 [Our paper](https://ieeexplore.ieee.org/document/10608167) has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
+
+- [Aug/16/2024] We have open-sourced the model's weight and prediction results. 
+- [Jul/24/2024] 💥 [Our paper](https://ieeexplore.ieee.org/document/10608167) has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
 
 ## Code
-🔥We will promptly update and enrich the contents of the repository.
+
+The structure of the project is as follows.
+```markdown
+- checkpoint
+- lib
+    - backbones
+        - efficientnet.py
+        - efficientnet_utils.py
+        - __init__.py
+        - pvtv2.py
+        - res2net.py
+        - resnet.py
+    - __init__.py
+    - model_for_eval.py
+    - model_for_train.py
+    - modules
+        - cbr_block.py
+        - crc_module.py
+        - encoder.py
+        - get_logit.py
+        - __init__.py
+        - map_module.py
+        - pse_module.py
+- measure
+    - eval_list.py
+    - eval_metrics.py
+    - __init__.py
+    - metric.py
+- myTest.py
+- myTrain.py
+- result
+- utils
+    - dataloader.py
+    - __init__.py
+    - loss_func.py
+    - trainer_for_six_logits.py
+    - utils.py
+```
+
+## Dataset
+- downloading **testing dataset**, which can be found in this [Google Drive Link (327.2MB)](https://drive.google.com/file/d/1Y2z7FD5p5y31vkZwQQomXFRB0HutHyao/view?usp=sharing). It contains five sub-datsets: CVC-300 (60 test samples), CVC-ClinicDB (62 test samples), CVC-ColonDB (380 test samples), ETIS-LaribPolypDB (196 test samples), Kvasir (100 test samples).
+- downloading **training dataset**, which can be found in this [Google Drive Link (399.5MB)](https://drive.google.com/file/d/1YiGHLw4iTvKdvbT6MgwO9zcCv8zJ_Bnb/view?usp=sharing). It contains two sub-datasets: Kvasir-SEG (900 train samples) and CVC-ClinicDB (550 train samples).
+
+## Weight 
+The weight of our proposed SEPNet can be downloaded at the following [**link**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334).
+
+## Prediction Results
+The prediction map of our proposed SEPNet can be downloaded at the following [**link**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294).
 
 ## Citation
 
