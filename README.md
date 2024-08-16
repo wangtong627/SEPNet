@@ -2,7 +2,9 @@
 ## Preface
 
 - This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" TCSVT-2024. 
-- If you have any questions about our paper, feel free to contact me. 
+- If you have any questions about our paper, feel free to contact me.
+>  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm).
+
 ## News
 
 - [Aug/16/2024] We have open-sourced the model's weight and prediction results. 
