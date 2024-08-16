@@ -9,7 +9,7 @@
 ## News
 
 - [Aug/16/2024] We have open-sourced the model's weight and prediction results. 
-- [Jul/24/2024] 💥 [Our paper](https://ieeexplore.ieee.org/document/10608167) has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
+- [Jul/24/2024] Our paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE-TCSVT).
 ## Overview
 
 ### Introduction
