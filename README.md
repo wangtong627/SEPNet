@@ -74,7 +74,6 @@ The structure of the project is as follows.
 
 ## Weight 
 - During training, it is necessary to load the pre-trained parameters of the backbone network, and the weights of PVT-V2-B2 can be downloaded from [**here**](https://pan.seu.edu.cn:443/#/link/0775D9F57116CE2267D091181D1C86E7).
-
 - You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334).
 
 ## Prediction Results
