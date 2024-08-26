@@ -10,6 +10,50 @@ import torch.nn.functional as F
 from lib.modules.cbr_block import *
 
 
+class SELayer(nn.Module):
+    def __init__(self, channel, reduction=16):
+        super(SELayer, self).__init__()
+        self.avg_pool = nn.AdaptiveAvgPool2d(1)
+        self.fc = nn.Sequential(
+            nn.Linear(channel, channel // reduction, bias=False),
+            nn.ReLU(inplace=True),
+            nn.Linear(channel // reduction, channel, bias=False),
+            nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        b, c, _, _ = x.size()
+        y = self.avg_pool(x).view(b, c)
+        y = self.fc(y).view(b, c, 1, 1)
+        return x * y.expand_as(x)
+
+
+class PGS_Block(nn.Module):
+    def __init__(self, in_channel, out_channel, kernel_size, dilation_rate, se_channel_reduction=16):
+        super(PGS_Block, self).__init__()
+        self.left_branch = nn.Sequential(nn.Conv2d(in_channel, in_channel, kernel_size=(1, kernel_size), padding=(0, kernel_size // 2)),
+                                         nn.Conv2d(in_channel, in_channel, kernel_size=(kernel_size, 1), padding=(kernel_size // 2, 0)),
+                                         nn.BatchNorm2d(in_channel),
+                                         nn.ReLU(inplace=True)
+                                         )
+        self.right_branch = nn.Sequential(nn.Conv2d(in_channel, in_channel, kernel_size=(kernel_size, 1), padding=(kernel_size // 2, 0)),
+                                          nn.Conv2d(in_channel, in_channel, kernel_size=(1, kernel_size), padding=(0, kernel_size // 2)),
+                                          nn.BatchNorm2d(in_channel),
+                                          nn.ReLU(inplace=True)
+                                          )
+        self.channel_smooth = BasicBlock(in_channel * 2, out_channel, kernel_size=3, stride=1, padding=1)
+        self.se = SELayer(out_channel, se_channel_reduction)
+        self.dilation_conv = BasicBlock(out_channel, out_channel, 3, padding=dilation_rate, dilation=dilation_rate, activate=True)
+
+    def forward(self, x):
+        left_feat = self.left_branch(x)
+        right_feat = self.right_branch(x)
+        sm_feat = self.channel_smooth(torch.cat((left_feat, right_feat), dim=1))
+        se_feat = self.se(sm_feat)
+        out_feat = self.dilation_conv(se_feat)
+        return out_feat
+
+
 class RFB_PGS_Modified_v2_S_BN_2LayerCR(nn.Module):
     """
     Use 2 layers for channels reduction
