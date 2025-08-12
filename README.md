@@ -3,13 +3,14 @@
 <!-- ## Preface -->
 
 - This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" IEEE TCSVT-2024.
-- Our paper is available at [**here**](https://ieeexplore.ieee.org/document/10608167).
+- [Our paper](https://ieeexplore.ieee.org/document/10608167) is published online. 
 - If you have any questions about our paper, feel free to contact me.
 >  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm).
 
 ## News
 
-- [Aug/16/2024] We have open-sourced the model's weight and prediction results. 
+- [Aug/16/2024] We have open-sourced the [model weight](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN) and [prediction results](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d
+). 
 - [Jul/24/2024] Our paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT).
 
 ## Overview
@@ -74,11 +75,11 @@ The structure of the project is as follows.
 - downloading **training dataset**, which can be found in this [Google Drive Link (399.5MB)](https://drive.google.com/file/d/1YiGHLw4iTvKdvbT6MgwO9zcCv8zJ_Bnb/view?usp=sharing). It contains two sub-datasets: Kvasir-SEG (900 train samples) and CVC-ClinicDB (550 train samples).
 
 ## Weight 
-- During training, it is necessary to load the pre-trained parameters of the backbone network, and the weights of PVT-V2-B2 can be downloaded from [**here**](https://pan.seu.edu.cn:443/#/link/0775D9F57116CE2267D091181D1C86E7).
-- You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334).
+- During training, it is necessary to load the pre-trained parameters of the backbone network, and the weights of PVT-V2-B2 can be downloaded from [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0775D9F57116CE2267D091181D1C86E7) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EbgpfL8aDBxDqJgSGv3YlXABYr8atQUnrKrbKqMI7310bg?e=7BKi6m).
+- You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN).
 
 ## Prediction Results
-- You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**here**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294).
+- You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
 
 ## Citation
 
