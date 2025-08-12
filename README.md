@@ -12,10 +12,10 @@ Tong Wang<sup>1</sup>, Xiaoming Qi<sup>1</sup>, and Guanyu Yang<sup>1,\*</sup>
 </div>
 <!-- ## Preface -->
 
-- This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" IEEE TCSVT-2024.
+<!-- - This repository provides code for _"**Polyp Segmentation via Semantic Enhanced Perceptual Network**_" IEEE TCSVT-2024.
 - [Our paper](https://ieeexplore.ieee.org/document/10608167) is published online. 
 - If you have any questions about our paper, feel free to contact me.
->  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm).
+>  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm). -->
 
 ## News
 
