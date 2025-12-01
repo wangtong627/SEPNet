@@ -39,7 +39,7 @@ Extensive experiments demonstrate that SEPNet outperforms 15 sota methods on fiv
 ![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
 _Figure: Qualitative Results._
 
----
+
 ## Installation and Usage 🛠️
 
 Following are the steps to set up the environment and use the project code:
@@ -78,11 +78,9 @@ python myTrain.py
 ```
 (Note: Ensure you have downloaded and set up the training dataset and pre-trained backbone weights as mentioned in the Dataset and Weight sections.)
 
-
 ### 2. Testing
 
 To test the model, first download the pre-trained weights (SEPNet model) from the links in the Weight section and place it correctly in your project structure (e.g., in the checkpoint folder).
-
 Then, run the testing script:
 
 ```bash
