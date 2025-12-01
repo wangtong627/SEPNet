@@ -39,6 +39,57 @@ Extensive experiments demonstrate that SEPNet outperforms 15 sota methods on fiv
 ![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
 _Figure: Qualitative Results._
 
+---
+## Installation and Usage 🛠️
+
+Following are the steps to set up the environment and use the project code:
+
+### 1. Prerequisites of Environment
+
+We recommend using **Anaconda** to manage the environment. The code has been tested with **Python 3.10**, **PyTorch 1.13.1 (with CUDA 11.7)**, and **Torchvision 0.14.1**.
+
+1.  **Create and activate the Conda environment:**
+    ```bash
+    conda create -n SEPNet python=3.10
+    conda activate SEPNet
+    ```
+
+2.  **Install PyTorch and Torchvision:**
+    For the specified versions (e.g., CUDA 11.7), you can install them using the following command (check the official PyTorch website for the latest or specific installation instructions for your system):
+    ```bash
+    # Example for PyTorch 1.13.1 with CUDA 11.7
+    pip install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 --extra-index-url [https://download.pytorch.org/whl/cu117](https://download.pytorch.org/whl/cu117)
+    ```
+
+3.  **Install other dependencies:**
+    The following libraries are required. Note that specific older versions were used for development and are recommended for reproducibility.
+    ```bash
+    pip install tensorboardX tqdm Pillow==6.2.2 scipy==1.2.2 opencv-python==3.4.2.17
+    # If a general tensorboardX is not enough, you might need to install tnt depending on the implementation:
+    # pip install git+[https://github.com/pytorch/tnt.git@master](https://github.com/pytorch/tnt.git@master)
+    ```
+
+### 2. Training
+
+To train the SEPNet model:
+
+```bash
+python myTrain.py
+```
+(Note: Ensure you have downloaded and set up the training dataset and pre-trained backbone weights as mentioned in the Dataset and Weight sections.)
+
+
+### 2. Testing
+
+To test the model, first download the pre-trained weights (SEPNet model) from the links in the Weight section and place it correctly in your project structure (e.g., in the checkpoint folder).
+
+Then, run the testing script:
+
+```bash
+python myTest.py
+```
+
+
 ## Code
 
 The structure of the project is as follows.
