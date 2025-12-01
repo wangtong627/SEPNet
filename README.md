@@ -65,8 +65,6 @@ We recommend using **Anaconda** to manage the environment. The code has been tes
     The following libraries are required. Note that specific older versions were used for development and are recommended for reproducibility.
     ```bash
     pip install tensorboardX tqdm Pillow==6.2.2 scipy==1.2.2 opencv-python==3.4.2.17
-    # If a general tensorboardX is not enough, you might need to install tnt depending on the implementation:
-    # pip install git+[https://github.com/pytorch/tnt.git@master](https://github.com/pytorch/tnt.git@master)
     ```
 
 ### 2. Training
