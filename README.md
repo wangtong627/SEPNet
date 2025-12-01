@@ -76,7 +76,7 @@ python myTrain.py
 ```
 (Note: Ensure you have downloaded and set up the training dataset and pre-trained backbone weights as mentioned in the Dataset and Weight sections.)
 
-### 2. Testing
+### 3. Testing
 
 To test the model, first download the pre-trained weights (SEPNet model) from the links in the Weight section and place it correctly in your project structure (e.g., in the checkpoint folder).
 Then, run the testing script:
