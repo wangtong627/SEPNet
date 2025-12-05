@@ -7,7 +7,11 @@ Tong Wang<sup>1</sup>, Xiaoming Qi<sup>1</sup>, and Guanyu Yang<sup>1,\*</sup>
 <sup>1</sup> Southeast University
 <small><span style="color:#E63946; font-weight:bold;">*</span> indicates corresponding authors</small>
 
-[[`Paper`](https://ieeexplore.ieee.org/document/10608167)]
+<!-- [[`Paper`](https://ieeexplore.ieee.org/document/10608167)] -->
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20TCSVT-blue)](https://ieeexplore.ieee.org/document/10608167)
+[![Weights](https://img.shields.io/badge/Model-Weights-FEA3AA)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN)
+[![Predict Map](https://img.shields.io/badge/Prediction-Results-66C7F4)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d)
+[![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-2C786C)](https://drive.google.com/drive/folders/1y1T-2mF4d4x_05S-fR8z-t3N1Xl5Zz7V?usp=sharing)
 </div>
 <!-- ## Preface -->
 
