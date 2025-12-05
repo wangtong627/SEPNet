@@ -49,7 +49,7 @@ Extensive experiments demonstrate that SEPNet outperforms 15 sota methods on fiv
 _Figure: Qualitative Results._
 
 
-## 🛠️ Installation and Usage 
+## 🛠️ Installation & Usage 
 
 Following are the steps to set up the environment and use the project code:
 
