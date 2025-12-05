@@ -1,8 +1,10 @@
 <div align="center">
-<h1> SEPNet (IEEE TCSVT 2024) </h1>
+<h1> 🩺 SEPNet (IEEE TCSVT 2024) </h1>
 <h3>Polyp Segmentation via Semantic Enhanced Perceptual Network</h3>
 
-Tong Wang<sup>1</sup>, Xiaoming Qi<sup>1</sup>, and Guanyu Yang<sup>1,\*</sup>
+  [Tong Wang](https://wangtong627.github.io/)<sup>1</sup>,
+  [Xiaoming Qi](https://jerryqseu.github.io/)<sup>1</sup>,
+  [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm)<sup>1,\*</sup>
 
 <sup>1</sup> Southeast University
 <small><span style="color:#E63946; font-weight:bold;">*</span> indicates corresponding authors</small>
