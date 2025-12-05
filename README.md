@@ -22,6 +22,10 @@
 - If you have any questions about our paper, feel free to contact me.
 >  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm). -->
 
+<p align="center">
+    <img src="https://i.imgur.com/waxVImv.png" alt="DiverseVAR">
+</p>
+
 ## 📢 News
 
 - **[Aug 16, 2024]** Released [model weights](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN) and [prediction maps](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
