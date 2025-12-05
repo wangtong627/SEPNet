@@ -11,7 +11,7 @@
 
 <!-- [[`Paper`](https://ieeexplore.ieee.org/document/10608167)] -->
 [![Paper](https://img.shields.io/badge/Paper-IEEE%20TCSVT-blue)](https://ieeexplore.ieee.org/document/10608167)
-[![Weights](https://img.shields.io/badge/Model-Weights-FEA3AA)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN)
+[![Checkpoint](https://img.shields.io/badge/Model_Weights-OneDrive-orange)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/
 [![Predict Map](https://img.shields.io/badge/Prediction-Results-66C7F4)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d)
 [![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-2C786C)](https://drive.google.com/drive/folders/1y1T-2mF4d4x_05S-fR8z-t3N1Xl5Zz7V?usp=sharing)
 </div>
@@ -22,11 +22,10 @@
 - If you have any questions about our paper, feel free to contact me.
 >  **Authors:** [Tong Wang](https://wangtong627.github.io/), [Xiaoming Qi](https://jerryqseu.github.io/) & [Guanyu Yang](https://cs.seu.edu.cn/gyyang/main.htm). -->
 
-## News
+## 📰 News
 
-- [Aug/16/2024] We have open-sourced the [model weight](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN) and [prediction results](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d
-). 
-- [Jul/24/2024] Our paper has been accepted by IEEE Transactions on Circuits and Systems for Video Technology (IEEE TCSVT).
+- **[Aug 16, 2024]** Released [model weights](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN) and [prediction maps](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
+- **[Jul 24, 2024]** Paper accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**.
 
 ## Overview
 
