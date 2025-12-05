@@ -147,6 +147,10 @@ The structure of the project is as follows.
 ### Prediction Results
 - You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
 
+## 🤝 FAQ
+
+- If you want to improve the usability or any piece of advice, please feel free to contact me directly ([E-mail](tong.wang@mbzuai.ac.ae)).
+
 ## 🔍 Citation
 
 ```bibtex
