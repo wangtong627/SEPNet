@@ -135,15 +135,16 @@ The structure of the project is as follows.
     - utils.py
 ```
 
-## 💡 Dataset
+## 💡 Dataset & Model Weights & Prediction Results
+### Dataset
 - downloading **testing dataset**, which can be found in this [Google Drive Link (327.2MB)](https://drive.google.com/file/d/1Y2z7FD5p5y31vkZwQQomXFRB0HutHyao/view?usp=sharing). It contains five sub-datsets: CVC-300 (60 test samples), CVC-ClinicDB (62 test samples), CVC-ColonDB (380 test samples), ETIS-LaribPolypDB (196 test samples), Kvasir (100 test samples).
 - downloading **training dataset**, which can be found in this [Google Drive Link (399.5MB)](https://drive.google.com/file/d/1YiGHLw4iTvKdvbT6MgwO9zcCv8zJ_Bnb/view?usp=sharing). It contains two sub-datasets: Kvasir-SEG (900 train samples) and CVC-ClinicDB (550 train samples).
 
-## Weight 
+### Weight 
 - During training, it is necessary to load the pre-trained parameters of the backbone network, and the weights of PVT-V2-B2 can be downloaded from [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0775D9F57116CE2267D091181D1C86E7) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EbgpfL8aDBxDqJgSGv3YlXABYr8atQUnrKrbKqMI7310bg?e=7BKi6m).
 - You can also choose to directly load our trained model weights for direct inference, the weight of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/A29A7D77DF2E47541397FFD38AD7A334) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN).
 
-## Prediction Results
+### Prediction Results
 - You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
 
 ## 🔍 Citation
