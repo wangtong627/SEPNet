@@ -73,7 +73,16 @@ We recommend using **Anaconda** to manage the environment. The code has been tes
 3.  **Install other dependencies:**
     The following libraries are required. Note that specific older versions were used for development and are recommended for reproducibility.
     ```bash
-    pip install tensorboardX tqdm Pillow==6.2.2 scipy==1.2.2 opencv-python==3.4.2.17
+    pip install timm==0.5.4 \
+            scipy \
+            numpy==1.26.0 \
+            opencv-python==4.7.0.72 \
+            tqdm \
+            scikit-learn \
+            tensorboard \
+            six \
+            tensorboardX \
+            Pillow==6.2.2
     ```
 
 ### 2. Training
