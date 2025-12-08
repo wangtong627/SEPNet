@@ -81,7 +81,6 @@ We recommend using **Anaconda** to manage the environment. The code has been tes
             scikit-learn \
             tensorboard \
             six \
-            tensorboardX \
             Pillow==6.2.2
     ```
 
