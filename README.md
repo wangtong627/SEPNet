@@ -29,7 +29,7 @@
 ## 📢 News
 
 - **[Aug 16, 2024]** Released [model weights](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN) and [prediction maps](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
-- **[Jul 24, 2024]** Paper accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**.
+- **[Jul 24, 2024]** [Paper](https://ieeexplore.ieee.org/document/10608167) accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**.
 
 ## 📌 Overview
 
