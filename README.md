@@ -54,6 +54,59 @@ Extensive experiments demonstrate that SEPNet outperforms 15 sota methods on fiv
 ![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
 _Figure: Qualitative Results._
 
+### Quantitative Comparison on IPS Datasets
+
+The following tables report the quantitative comparison results on two widely used **seen datasets**,  
+**CVC-ClinicDB** and **Kvasir**, following the evaluation protocol in our IEEE TCSVT 2024 paper.  
+We adopt **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, and **MAE** as evaluation metrics,  
+where higher values indicate better performance except for MAE.
+
+---
+
+#### CVC-ClinicDB (612 images)
+
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.823 | 0.755 | 0.889 | 0.811 | 0.914 | 0.019 |
+| UNet++ | 0.794 | 0.729 | 0.873 | 0.785 | 0.890 | 0.019 |
+| SFA | 0.700 | 0.607 | 0.793 | 0.647 | 0.840 | 0.042 |
+| DenseBiasNet | 0.895 | 0.838 | 0.924 | 0.884 | 0.956 | 0.014 |
+| PraNet | 0.899 | 0.849 | 0.936 | 0.896 | 0.963 | 0.009 |
+| ACSNet | 0.882 | 0.826 | 0.927 | 0.873 | 0.947 | 0.011 |
+| MSEG | 0.909 | 0.864 | 0.938 | 0.907 | 0.961 | 0.007 |
+| MSNet | 0.918 | 0.869 | 0.946 | 0.913 | 0.973 | 0.008 |
+| CCBANet | 0.868 | 0.812 | 0.916 | 0.861 | 0.935 | 0.015 |
+| SANet | 0.916 | 0.859 | 0.939 | 0.909 | 0.971 | 0.012 |
+| DCRNet | 0.896 | 0.844 | 0.933 | 0.890 | 0.964 | 0.010 |
+| LDNet | 0.881 | 0.825 | 0.924 | 0.879 | 0.960 | 0.010 |
+| Polyp-Mixer | 0.908 | 0.856 | 0.943 | 0.902 | 0.963 | 0.009 |
+| M2SNet | 0.922 | 0.880 | 0.942 | 0.917 | 0.970 | 0.009 |
+| CFANet | 0.933 | 0.883 | 0.950 | 0.924 | 0.981 | 0.006 |
+| **SEPNet (Ours)** | **0.937** | **0.883** | **0.959** | **0.933** | **0.984** | **0.006** |
+
+---
+
+#### Kvasir (1000 images)
+
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.818 | 0.746 | 0.858 | 0.794 | 0.881 | 0.055 |
+| UNet++ | 0.821 | 0.744 | 0.862 | 0.808 | 0.887 | 0.048 |
+| SFA | 0.723 | 0.611 | 0.782 | 0.670 | 0.834 | 0.075 |
+| DenseBiasNet | 0.856 | 0.778 | 0.875 | 0.833 | 0.922 | 0.043 |
+| PraNet | 0.898 | 0.840 | 0.915 | 0.885 | 0.944 | 0.030 |
+| ACSNet | 0.898 | 0.838 | 0.920 | 0.882 | 0.941 | 0.032 |
+| MSEG | 0.897 | 0.839 | 0.912 | 0.885 | 0.942 | 0.028 |
+| MSNet | 0.905 | 0.849 | 0.923 | 0.892 | 0.947 | 0.025 |
+| CCBANet | 0.853 | 0.777 | 0.887 | 0.831 | 0.901 | 0.035 |
+| SANet | 0.904 | 0.847 | 0.915 | 0.892 | 0.949 | 0.028 |
+| DCRNet | 0.886 | 0.825 | 0.911 | 0.868 | 0.933 | 0.035 |
+| LDNet | 0.887 | 0.821 | 0.905 | 0.831 | 0.941 | 0.041 |
+| Polyp-Mixer | 0.916 | 0.861 | 0.922 | 0.908 | 0.959 | 0.025 |
+| M2SNet | 0.912 | 0.861 | 0.924 | 0.901 | 0.953 | 0.025 |
+| CFANet | 0.915 | 0.861 | 0.924 | 0.903 | 0.956 | 0.023 |
+| **SEPNet (Ours)** | **0.922** | **0.869** | **0.934** | **0.914** | **0.961** | **0.022** |
+
 
 ## 🛠️ Installation & Usage 
 
@@ -170,6 +223,8 @@ We additionally provide model weights and prediction maps evaluated on the **SUN
 
 - **SUN-SEG Prediction Maps**  
   [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
+
+
 
 ## 📊 Experimental Results on SUN-SEG Dataset
 
