@@ -38,9 +38,6 @@
 - **[Jul 24, 2024]** [Paper](https://ieeexplore.ieee.org/document/10608167) accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**.
 
 ## 📌 Overview
-
-### Introduction
-
 Accurate polyp segmentation is crucial for precise diagnosis and prevention of colorectal cancer. However, precise polyp segmentation still faces challenges, mainly due to the similarity of polyps to their surroundings in terms of color, shape, texture, and other aspects, making it difficult to learn accurate semantics.
 
 To address this issue, we propose a novel semantic enhanced perceptual network (SEPNet) for polyp segmentation, which enhances polyp semantics to guide the exploration of polyp features. Specifically, we propose the Polyp Semantic Enhancement (PSE) module, which utilizes a coarse segmentation map as a basis and selects kernels to extract semantic information from corresponding regions, thereby enhancing the discriminability of polyp features highly similar to the background. Furthermore, we design a plug-and-play semantic guidance structure for the PSE, leveraging accurate semantic information to guide scale perception and context fusion, thereby enhancing feature discriminability.
@@ -49,138 +46,6 @@ Finally, we construct the Contextual Representation Calibration (CRC) module, wh
 
 Extensive experiments demonstrate that SEPNet outperforms 15 sota methods on five challenging datasets across six standard metrics.
 
-### Qualitative Results
-
-![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
-_Figure: Qualitative Results._
-
-### Quantitative Comparison on IPS Datasets
-
-The following tables report the quantitative comparison results on two widely used **seen datasets**,  
-**CVC-ClinicDB** and **Kvasir**, following the evaluation protocol in our IEEE TCSVT 2024 paper.  
-We adopt **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, and **MAE** as evaluation metrics,  
-where higher values indicate better performance except for MAE.
-
----
-
-#### CVC-ClinicDB (612 images)
-
-| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
-|------|--------|--------|------|------------|----------|-------|
-| UNet | 0.823 | 0.755 | 0.889 | 0.811 | 0.914 | 0.019 |
-| UNet++ | 0.794 | 0.729 | 0.873 | 0.785 | 0.890 | 0.019 |
-| SFA | 0.700 | 0.607 | 0.793 | 0.647 | 0.840 | 0.042 |
-| DenseBiasNet | 0.895 | 0.838 | 0.924 | 0.884 | 0.956 | 0.014 |
-| PraNet | 0.899 | 0.849 | 0.936 | 0.896 | 0.963 | 0.009 |
-| ACSNet | 0.882 | 0.826 | 0.927 | 0.873 | 0.947 | 0.011 |
-| MSEG | 0.909 | 0.864 | 0.938 | 0.907 | 0.961 | 0.007 |
-| MSNet | 0.918 | 0.869 | 0.946 | 0.913 | 0.973 | 0.008 |
-| CCBANet | 0.868 | 0.812 | 0.916 | 0.861 | 0.935 | 0.015 |
-| SANet | 0.916 | 0.859 | 0.939 | 0.909 | 0.971 | 0.012 |
-| DCRNet | 0.896 | 0.844 | 0.933 | 0.890 | 0.964 | 0.010 |
-| LDNet | 0.881 | 0.825 | 0.924 | 0.879 | 0.960 | 0.010 |
-| Polyp-Mixer | 0.908 | 0.856 | 0.943 | 0.902 | 0.963 | 0.009 |
-| M2SNet | 0.922 | 0.880 | 0.942 | 0.917 | 0.970 | 0.009 |
-| CFANet | 0.933 | 0.883 | 0.950 | 0.924 | 0.981 | 0.006 |
-| **SEPNet (Ours)** | **0.937** | **0.883** | **0.959** | **0.933** | **0.984** | **0.006** |
-
----
-
-#### Kvasir (1000 images)
-
-| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
-|------|--------|--------|------|------------|----------|-------|
-| UNet | 0.818 | 0.746 | 0.858 | 0.794 | 0.881 | 0.055 |
-| UNet++ | 0.821 | 0.744 | 0.862 | 0.808 | 0.887 | 0.048 |
-| SFA | 0.723 | 0.611 | 0.782 | 0.670 | 0.834 | 0.075 |
-| DenseBiasNet | 0.856 | 0.778 | 0.875 | 0.833 | 0.922 | 0.043 |
-| PraNet | 0.898 | 0.840 | 0.915 | 0.885 | 0.944 | 0.030 |
-| ACSNet | 0.898 | 0.838 | 0.920 | 0.882 | 0.941 | 0.032 |
-| MSEG | 0.897 | 0.839 | 0.912 | 0.885 | 0.942 | 0.028 |
-| MSNet | 0.905 | 0.849 | 0.923 | 0.892 | 0.947 | 0.025 |
-| CCBANet | 0.853 | 0.777 | 0.887 | 0.831 | 0.901 | 0.035 |
-| SANet | 0.904 | 0.847 | 0.915 | 0.892 | 0.949 | 0.028 |
-| DCRNet | 0.886 | 0.825 | 0.911 | 0.868 | 0.933 | 0.035 |
-| LDNet | 0.887 | 0.821 | 0.905 | 0.831 | 0.941 | 0.041 |
-| Polyp-Mixer | 0.916 | 0.861 | 0.922 | 0.908 | 0.959 | 0.025 |
-| M2SNet | 0.912 | 0.861 | 0.924 | 0.901 | 0.953 | 0.025 |
-| CFANet | 0.915 | 0.861 | 0.924 | 0.903 | 0.956 | 0.023 |
-| **SEPNet (Ours)** | **0.922** | **0.869** | **0.934** | **0.914** | **0.961** | **0.022** |
-
-
-The following tables present quantitative results on three **unseen datasets**,  
-including **CVC-300**, **CVC-ColonDB**, and **ETIS-LaribPolypDB**, which are not used during training.  
-These results demonstrate the generalization ability of SEPNet under challenging cross-dataset settings.  
-We report **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, and **MAE** as evaluation metrics.
-
----
-
-#### CVC-300 (60 images)
-
-| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
-|------|--------|--------|------|------------|----------|-------|
-| UNet | 0.710 | 0.627 | 0.843 | 0.684 | 0.848 | 0.022 |
-| UNet++ | 0.707 | 0.624 | 0.839 | 0.687 | 0.834 | 0.018 |
-| SFA | 0.467 | 0.329 | 0.640 | 0.341 | 0.644 | 0.065 |
-| DenseBiasNet | 0.809 | 0.724 | 0.880 | 0.769 | 0.921 | 0.019 |
-| PraNet | 0.871 | 0.797 | 0.925 | 0.843 | 0.950 | 0.010 |
-| ACSNet | 0.863 | 0.787 | 0.923 | 0.825 | 0.939 | 0.013 |
-| MSEG | 0.874 | 0.804 | 0.924 | 0.852 | 0.948 | 0.009 |
-| MSNet | 0.865 | 0.799 | 0.926 | 0.848 | 0.945 | 0.010 |
-| CCBANet | 0.888 | 0.815 | 0.928 | 0.859 | 0.962 | 0.010 |
-| SANet | 0.888 | 0.815 | 0.928 | 0.859 | 0.962 | 0.010 |
-| DCRNet | 0.856 | 0.788 | 0.921 | 0.830 | 0.943 | 0.010 |
-| LDNet | 0.869 | 0.793 | 0.923 | 0.841 | 0.948 | 0.010 |
-| Polyp-Mixer | 0.891 | 0.820 | 0.929 | 0.861 | 0.948 | 0.009 |
-| M2SNet | 0.869 | 0.807 | 0.939 | 0.881 | 0.965 | 0.009 |
-| CFANet | 0.893 | 0.827 | 0.938 | 0.875 | 0.962 | 0.008 |
-| **SEPNet (Ours)** | **0.937** | **0.883** | **0.959** | **0.933** | **0.984** | **0.006** |
-
----
-
-#### CVC-ColonDB (380 images)
-
-| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
-|------|--------|--------|------|------------|----------|-------|
-| UNet | 0.504 | 0.436 | 0.710 | 0.491 | 0.692 | 0.061 |
-| UNet++ | 0.482 | 0.408 | 0.693 | 0.467 | 0.680 | 0.064 |
-| SFA | 0.456 | 0.337 | 0.629 | 0.366 | 0.604 | 0.095 |
-| DenseBiasNet | 0.646 | 0.552 | 0.763 | 0.614 | 0.803 | 0.061 |
-| PraNet | 0.712 | 0.640 | 0.820 | 0.809 | 0.847 | 0.043 |
-| ACSNet | 0.716 | 0.649 | 0.829 | 0.837 | 0.839 | 0.039 |
-| MSEG | 0.735 | 0.666 | 0.834 | 0.820 | 0.859 | 0.038 |
-| MSNet | 0.751 | 0.671 | 0.838 | 0.820 | 0.872 | 0.041 |
-| CCBANet | 0.706 | 0.626 | 0.812 | 0.768 | 0.852 | 0.042 |
-| SANet | 0.753 | 0.670 | 0.837 | 0.826 | 0.869 | 0.043 |
-| DCRNet | 0.704 | 0.631 | 0.821 | 0.804 | 0.840 | 0.052 |
-| LDNet | 0.740 | 0.652 | 0.830 | 0.817 | 0.876 | 0.046 |
-| Polyp-Mixer | 0.791 | 0.706 | 0.862 | 0.768 | 0.893 | 0.039 |
-| M2SNet | 0.758 | 0.685 | 0.842 | 0.737 | 0.869 | 0.038 |
-| CFANet | 0.743 | 0.665 | 0.835 | 0.728 | 0.869 | 0.039 |
-| **SEPNet (Ours)** | **0.859** | **0.740** | **0.878** | **0.857** | **0.926** | **0.026** |
-
----
-
-#### ETIS-LaribPolypDB (196 images)
-
-| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
-|------|--------|--------|------|------------|----------|-------|
-| UNet | 0.398 | 0.335 | 0.684 | 0.366 | 0.643 | 0.036 |
-| UNet++ | 0.401 | 0.344 | 0.683 | 0.390 | 0.629 | 0.035 |
-| SFA | 0.297 | 0.217 | 0.557 | 0.231 | 0.531 | 0.109 |
-| DenseBiasNet | 0.473 | 0.390 | 0.672 | 0.417 | 0.695 | 0.067 |
-| PraNet | 0.628 | 0.567 | 0.794 | 0.700 | 0.808 | 0.031 |
-| ACSNet | 0.578 | 0.509 | 0.754 | 0.578 | 0.737 | 0.059 |
-| MSEG | 0.700 | 0.630 | 0.828 | 0.671 | 0.855 | 0.015 |
-| MSNet | 0.723 | 0.652 | 0.845 | 0.677 | 0.875 | 0.020 |
-| CCBANet | 0.559 | 0.483 | 0.751 | 0.513 | 0.783 | 0.038 |
-| SANet | 0.750 | 0.654 | 0.849 | 0.685 | 0.881 | 0.015 |
-| DCRNet | 0.556 | 0.496 | 0.736 | 0.506 | 0.742 | 0.096 |
-| LDNet | 0.645 | 0.551 | 0.788 | 0.600 | 0.841 | 0.041 |
-| Polyp-Mixer | 0.759 | 0.676 | 0.863 | 0.711 | 0.875 | 0.017 |
-| M2SNet | 0.749 | 0.678 | 0.846 | 0.712 | 0.872 | 0.017 |
-| CFANet | 0.732 | 0.655 | 0.845 | 0.693 | 0.881 | 0.016 |
-| **SEPNet (Ours)** | **0.803** | **0.721** | **0.882** | **0.771** | **0.934** | **0.014** |
 
 ## 🛠️ Installation & Usage 
 
@@ -299,6 +164,121 @@ We additionally provide model weights and prediction maps evaluated on the **SUN
   [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
 
 
+## 📊 Experimental Results on IPS Datasets
+### Qualitative Results
+![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
+_Figure: Qualitative Results._
+
+## Quantitative Comparison 
+The following tables report the quantitative comparison results on two widely used **seen datasets**,  
+**CVC-ClinicDB** and **Kvasir**, following the evaluation protocol in our IEEE TCSVT 2024 paper.  
+We adopt **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, and **MAE** as evaluation metrics,  
+where higher values indicate better performance except for MAE.
+
+#### CVC-ClinicDB (612 images)
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.823 | 0.755 | 0.889 | 0.811 | 0.914 | 0.019 |
+| UNet++ | 0.794 | 0.729 | 0.873 | 0.785 | 0.890 | 0.019 |
+| SFA | 0.700 | 0.607 | 0.793 | 0.647 | 0.840 | 0.042 |
+| DenseBiasNet | 0.895 | 0.838 | 0.924 | 0.884 | 0.956 | 0.014 |
+| PraNet | 0.899 | 0.849 | 0.936 | 0.896 | 0.963 | 0.009 |
+| ACSNet | 0.882 | 0.826 | 0.927 | 0.873 | 0.947 | 0.011 |
+| MSEG | 0.909 | 0.864 | 0.938 | 0.907 | 0.961 | 0.007 |
+| MSNet | 0.918 | 0.869 | 0.946 | 0.913 | 0.973 | 0.008 |
+| CCBANet | 0.868 | 0.812 | 0.916 | 0.861 | 0.935 | 0.015 |
+| SANet | 0.916 | 0.859 | 0.939 | 0.909 | 0.971 | 0.012 |
+| DCRNet | 0.896 | 0.844 | 0.933 | 0.890 | 0.964 | 0.010 |
+| LDNet | 0.881 | 0.825 | 0.924 | 0.879 | 0.960 | 0.010 |
+| Polyp-Mixer | 0.908 | 0.856 | 0.943 | 0.902 | 0.963 | 0.009 |
+| M2SNet | 0.922 | 0.880 | 0.942 | 0.917 | 0.970 | 0.009 |
+| CFANet | 0.933 | 0.883 | 0.950 | 0.924 | 0.981 | 0.006 |
+| **SEPNet (Ours)** | **0.937** | **0.883** | **0.959** | **0.933** | **0.984** | **0.006** |
+
+#### Kvasir (1000 images)
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.818 | 0.746 | 0.858 | 0.794 | 0.881 | 0.055 |
+| UNet++ | 0.821 | 0.744 | 0.862 | 0.808 | 0.887 | 0.048 |
+| SFA | 0.723 | 0.611 | 0.782 | 0.670 | 0.834 | 0.075 |
+| DenseBiasNet | 0.856 | 0.778 | 0.875 | 0.833 | 0.922 | 0.043 |
+| PraNet | 0.898 | 0.840 | 0.915 | 0.885 | 0.944 | 0.030 |
+| ACSNet | 0.898 | 0.838 | 0.920 | 0.882 | 0.941 | 0.032 |
+| MSEG | 0.897 | 0.839 | 0.912 | 0.885 | 0.942 | 0.028 |
+| MSNet | 0.905 | 0.849 | 0.923 | 0.892 | 0.947 | 0.025 |
+| CCBANet | 0.853 | 0.777 | 0.887 | 0.831 | 0.901 | 0.035 |
+| SANet | 0.904 | 0.847 | 0.915 | 0.892 | 0.949 | 0.028 |
+| DCRNet | 0.886 | 0.825 | 0.911 | 0.868 | 0.933 | 0.035 |
+| LDNet | 0.887 | 0.821 | 0.905 | 0.831 | 0.941 | 0.041 |
+| Polyp-Mixer | 0.916 | 0.861 | 0.922 | 0.908 | 0.959 | 0.025 |
+| M2SNet | 0.912 | 0.861 | 0.924 | 0.901 | 0.953 | 0.025 |
+| CFANet | 0.915 | 0.861 | 0.924 | 0.903 | 0.956 | 0.023 |
+| **SEPNet (Ours)** | **0.922** | **0.869** | **0.934** | **0.914** | **0.961** | **0.022** |
+
+The following tables present quantitative results on three **unseen datasets**,  
+including **CVC-300**, **CVC-ColonDB**, and **ETIS-LaribPolypDB**, which are not used during training.  
+These results demonstrate the generalization ability of SEPNet under challenging cross-dataset settings.  
+We report **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, and **MAE** as evaluation metrics.
+
+#### CVC-300 (60 images)
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.710 | 0.627 | 0.843 | 0.684 | 0.848 | 0.022 |
+| UNet++ | 0.707 | 0.624 | 0.839 | 0.687 | 0.834 | 0.018 |
+| SFA | 0.467 | 0.329 | 0.640 | 0.341 | 0.644 | 0.065 |
+| DenseBiasNet | 0.809 | 0.724 | 0.880 | 0.769 | 0.921 | 0.019 |
+| PraNet | 0.871 | 0.797 | 0.925 | 0.843 | 0.950 | 0.010 |
+| ACSNet | 0.863 | 0.787 | 0.923 | 0.825 | 0.939 | 0.013 |
+| MSEG | 0.874 | 0.804 | 0.924 | 0.852 | 0.948 | 0.009 |
+| MSNet | 0.865 | 0.799 | 0.926 | 0.848 | 0.945 | 0.010 |
+| CCBANet | 0.888 | 0.815 | 0.928 | 0.859 | 0.962 | 0.010 |
+| SANet | 0.888 | 0.815 | 0.928 | 0.859 | 0.962 | 0.010 |
+| DCRNet | 0.856 | 0.788 | 0.921 | 0.830 | 0.943 | 0.010 |
+| LDNet | 0.869 | 0.793 | 0.923 | 0.841 | 0.948 | 0.010 |
+| Polyp-Mixer | 0.891 | 0.820 | 0.929 | 0.861 | 0.948 | 0.009 |
+| M2SNet | 0.869 | 0.807 | 0.939 | 0.881 | 0.965 | 0.009 |
+| CFANet | 0.893 | 0.827 | 0.938 | 0.875 | 0.962 | 0.008 |
+| **SEPNet (Ours)** | **0.937** | **0.883** | **0.959** | **0.933** | **0.984** | **0.006** |
+
+#### CVC-ColonDB (380 images)
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.504 | 0.436 | 0.710 | 0.491 | 0.692 | 0.061 |
+| UNet++ | 0.482 | 0.408 | 0.693 | 0.467 | 0.680 | 0.064 |
+| SFA | 0.456 | 0.337 | 0.629 | 0.366 | 0.604 | 0.095 |
+| DenseBiasNet | 0.646 | 0.552 | 0.763 | 0.614 | 0.803 | 0.061 |
+| PraNet | 0.712 | 0.640 | 0.820 | 0.809 | 0.847 | 0.043 |
+| ACSNet | 0.716 | 0.649 | 0.829 | 0.837 | 0.839 | 0.039 |
+| MSEG | 0.735 | 0.666 | 0.834 | 0.820 | 0.859 | 0.038 |
+| MSNet | 0.751 | 0.671 | 0.838 | 0.820 | 0.872 | 0.041 |
+| CCBANet | 0.706 | 0.626 | 0.812 | 0.768 | 0.852 | 0.042 |
+| SANet | 0.753 | 0.670 | 0.837 | 0.826 | 0.869 | 0.043 |
+| DCRNet | 0.704 | 0.631 | 0.821 | 0.804 | 0.840 | 0.052 |
+| LDNet | 0.740 | 0.652 | 0.830 | 0.817 | 0.876 | 0.046 |
+| Polyp-Mixer | 0.791 | 0.706 | 0.862 | 0.768 | 0.893 | 0.039 |
+| M2SNet | 0.758 | 0.685 | 0.842 | 0.737 | 0.869 | 0.038 |
+| CFANet | 0.743 | 0.665 | 0.835 | 0.728 | 0.869 | 0.039 |
+| **SEPNet (Ours)** | **0.859** | **0.740** | **0.878** | **0.857** | **0.926** | **0.026** |
+
+#### ETIS-LaribPolypDB (196 images)
+| Method | mDice ↑ | mIoU ↑ | Sα ↑ | wFmeasure ↑ | meanEm ↑ | MAE ↓ |
+|------|--------|--------|------|------------|----------|-------|
+| UNet | 0.398 | 0.335 | 0.684 | 0.366 | 0.643 | 0.036 |
+| UNet++ | 0.401 | 0.344 | 0.683 | 0.390 | 0.629 | 0.035 |
+| SFA | 0.297 | 0.217 | 0.557 | 0.231 | 0.531 | 0.109 |
+| DenseBiasNet | 0.473 | 0.390 | 0.672 | 0.417 | 0.695 | 0.067 |
+| PraNet | 0.628 | 0.567 | 0.794 | 0.700 | 0.808 | 0.031 |
+| ACSNet | 0.578 | 0.509 | 0.754 | 0.578 | 0.737 | 0.059 |
+| MSEG | 0.700 | 0.630 | 0.828 | 0.671 | 0.855 | 0.015 |
+| MSNet | 0.723 | 0.652 | 0.845 | 0.677 | 0.875 | 0.020 |
+| CCBANet | 0.559 | 0.483 | 0.751 | 0.513 | 0.783 | 0.038 |
+| SANet | 0.750 | 0.654 | 0.849 | 0.685 | 0.881 | 0.015 |
+| DCRNet | 0.556 | 0.496 | 0.736 | 0.506 | 0.742 | 0.096 |
+| LDNet | 0.645 | 0.551 | 0.788 | 0.600 | 0.841 | 0.041 |
+| Polyp-Mixer | 0.759 | 0.676 | 0.863 | 0.711 | 0.875 | 0.017 |
+| M2SNet | 0.749 | 0.678 | 0.846 | 0.712 | 0.872 | 0.017 |
+| CFANet | 0.732 | 0.655 | 0.845 | 0.693 | 0.881 | 0.016 |
+| **SEPNet (Ours)** | **0.803** | **0.721** | **0.882** | **0.771** | **0.934** | **0.014** |
 
 ## 📊 Experimental Results on SUN-SEG Dataset
 
