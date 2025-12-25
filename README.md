@@ -153,16 +153,6 @@ The structure of the project is as follows.
 ### Prediction Results
 - You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
 
-### SUN-SEG Results
-
-We additionally provide model weights and prediction maps evaluated on the **SUN-SEG dataset**, which further demonstrates the generalization ability of SEPNet.
-
-- **SUN-SEG Model Weights**  
-  [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDHwJcR4jysT7BhUd0MIcOkAYcoMrzVWPI6zjHO63k71UA?e=IeaZ5T)
-
-- **SUN-SEG Prediction Maps**  
-  [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
-
 
 ## 📊 Experimental Results on IPS Datasets
 ### Qualitative Results
@@ -281,6 +271,17 @@ We report **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, a
 | **SEPNet (Ours)** | **0.803** | **0.721** | **0.882** | **0.771** | **0.934** | **0.014** |
 
 ## 📊 Experimental Results on SUN-SEG Dataset
+
+### SUN-SEG Results
+
+We additionally provide model weights and prediction maps evaluated on the **SUN-SEG dataset**, which further demonstrates the generalization ability of SEPNet.
+
+- **SUN-SEG Model Weights**  
+  [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDHwJcR4jysT7BhUd0MIcOkAYcoMrzVWPI6zjHO63k71UA?e=IeaZ5T)
+
+- **SUN-SEG Prediction Maps**  
+  [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
+
 
 We report quantitative comparisons on the **SUN-SEG benchmark**, following the official evaluation protocol.
 The dataset is divided into **Easy/Hard** and **Seen/Unseen** subsets.
