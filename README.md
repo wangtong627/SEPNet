@@ -169,7 +169,7 @@ We additionally provide model weights and prediction maps evaluated on the **SUN
 ![](https://github.com/wangtong627/SEPNet/blob/main/qualitative_results.png)
 _Figure: Qualitative Results._
 
-## Quantitative Comparison 
+### Quantitative Comparison 
 The following tables report the quantitative comparison results on two widely used **seen datasets**,  
 **CVC-ClinicDB** and **Kvasir**, following the evaluation protocol in our IEEE TCSVT 2024 paper.  
 We adopt **mDice**, **mIoU**, **S-measure (Sα)**, **wFmeasure**, **meanEm**, and **MAE** as evaluation metrics,  
