@@ -14,6 +14,9 @@
 [![Checkpoint](https://img.shields.io/badge/Model_Weights-OneDrive-orange)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN)
 [![Prediction Maps](https://img.shields.io/badge/Prediction_Maps-OneDrive-purple)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d)
 [![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-2C786C)](https://drive.google.com/drive/folders/1y1T-2mF4d4x_05S-fR8z-t3N1Xl5Zz7V?usp=sharing)
+[![SUN-SEG Weights](https://img.shields.io/badge/SUN--SEG_Model_Weights-OneDrive-orange)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDHwJcR4jysT7BhUd0MIcOkAYcoMrzVWPI6zjHO63k71UA?e=IeaZ5T)
+[![SUN-SEG Prediction Maps](https://img.shields.io/badge/SUN--SEG_Prediction_Maps-OneDrive-purple)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
+
 </div>
 <!-- ## Preface -->
 
@@ -27,7 +30,9 @@
 </p>
 
 ## 📢 News
-
+- **[Dec 25, 2025]** Released **SUN-SEG dataset** model weights and prediction maps.
+  - [SUN-SEG Model Weights (OneDrive)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDHwJcR4jysT7BhUd0MIcOkAYcoMrzVWPI6zjHO63k71UA?e=IeaZ5T)
+  - [SUN-SEG Prediction Maps (OneDrive)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
 - **[Aug 16, 2024]** Released [model weights](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN) and [prediction maps](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
 - **[Jul 24, 2024]** [Paper](https://ieeexplore.ieee.org/document/10608167) accepted by **IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)**.
 
@@ -154,6 +159,79 @@ The structure of the project is as follows.
 
 ### Prediction Results
 - You can also directly download our prediction results for evaluation. The prediction map of our proposed SEPNet can be downloaded at [**SEU_Pan**](https://pan.seu.edu.cn:443/#/link/0FADA6A9BC151291FD009934F7BC4294) or [**OneDrive**](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d).
+
+### SUN-SEG Results
+
+We additionally provide model weights and prediction maps evaluated on the **SUN-SEG dataset**, which further demonstrates the generalization ability of SEPNet.
+
+- **SUN-SEG Model Weights**  
+  [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDHwJcR4jysT7BhUd0MIcOkAYcoMrzVWPI6zjHO63k71UA?e=IeaZ5T)
+
+- **SUN-SEG Prediction Maps**  
+  [OneDrive Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
+
+## 📊 Experimental Results on SUN-SEG Dataset
+
+We report quantitative comparisons on the **SUN-SEG benchmark**, following the official evaluation protocol.
+The dataset is divided into **Easy/Hard** and **Seen/Unseen** subsets.
+### TestEasyDataset / Seen
+
+| Method | Smeasure | adpEm | meanEm | meanFm | wFmeasure | meanSen | meanSpe | meanDice | meanIoU | MAE |
+|-------|----------|-------|--------|--------|-----------|---------|---------|----------|---------|-----|
+| 2019-TPAMI-COSNet | 0.845 | 0.932 | 0.836 | 0.774 | 0.727 | 0.691 | 0.963 | 0.730 | 0.648 | 0.034 |
+| 2020-AAAI-PCSA | 0.852 | 0.875 | 0.835 | 0.744 | 0.681 | 0.703 | 0.968 | 0.709 | 0.604 | 0.039 |
+| 2020-MICCAI-23DCNN | 0.895 | 0.941 | 0.909 | 0.853 | 0.819 | 0.808 | 0.977 | 0.829 | 0.756 | 0.021 |
+| 2021-ICCV-DCFNet | 0.572 | 0.611 | 0.591 | 0.393 | 0.357 | 0.475 | 0.648 | 0.389 | 0.320 | 0.174 |
+| 2021-NIPS-AMD | 0.471 | 0.527 | 0.526 | 0.122 | 0.114 | 0.287 | 0.552 | 0.135 | 0.083 | 0.194 |
+| PraNet | 0.918 | 0.953 | 0.942 | 0.902 | 0.877 | 0.869 | 0.985 | 0.883 | 0.825 | 0.020 |
+| ACSNet | 0.920 | 0.951 | 0.942 | 0.892 | 0.874 | 0.878 | 0.967 | 0.882 | 0.828 | 0.017 |
+| SANet | 0.916 | 0.954 | 0.933 | 0.885 | 0.866 | 0.863 | 0.973 | 0.872 | 0.820 | 0.018 |
+| **SEPNet** | **0.931** | **0.968** | **0.962** | **0.908** | **0.883** | **0.887** | **0.985** | **0.896** | **0.834** | **0.017** |
+
+### TestEasyDataset / Seen
+
+| Method | Smeasure | adpEm | meanEm | meanFm | wFmeasure | meanSen | meanSpe | meanDice | meanIoU | MAE |
+|-------|----------|-------|--------|--------|-----------|---------|---------|----------|---------|-----|
+| 2019-TPAMI-COSNet | 0.845 | 0.932 | 0.836 | 0.774 | 0.727 | 0.691 | 0.963 | 0.730 | 0.648 | 0.034 |
+| 2020-AAAI-PCSA | 0.852 | 0.875 | 0.835 | 0.744 | 0.681 | 0.703 | 0.968 | 0.709 | 0.604 | 0.039 |
+| 2020-MICCAI-23DCNN | 0.895 | 0.941 | 0.909 | 0.853 | 0.819 | 0.808 | 0.977 | 0.829 | 0.756 | 0.021 |
+| 2021-ICCV-DCFNet | 0.572 | 0.611 | 0.591 | 0.393 | 0.357 | 0.475 | 0.648 | 0.389 | 0.320 | 0.174 |
+| 2021-NIPS-AMD | 0.471 | 0.527 | 0.526 | 0.122 | 0.114 | 0.287 | 0.552 | 0.135 | 0.083 | 0.194 |
+| PraNet | 0.918 | 0.953 | 0.942 | 0.902 | 0.877 | 0.869 | 0.985 | 0.883 | 0.825 | 0.020 |
+| ACSNet | 0.920 | 0.951 | 0.942 | 0.892 | 0.874 | 0.878 | 0.967 | 0.882 | 0.828 | 0.017 |
+| SANet | 0.916 | 0.954 | 0.933 | 0.885 | 0.866 | 0.863 | 0.973 | 0.872 | 0.820 | 0.018 |
+| **SEPNet** | **0.931** | **0.968** | **0.962** | **0.908** | **0.883** | **0.887** | **0.985** | **0.896** | **0.834** | **0.017** |
+
+
+### TestHardDataset / Seen
+
+| Method | Smeasure | adpEm | meanEm | meanFm | wFmeasure | meanSen | meanSpe | meanDice | meanIoU | MAE |
+|-------|----------|-------|--------|--------|-----------|---------|---------|----------|---------|-----|
+| 2019-TPAMI-COSNet | 0.785 | 0.894 | 0.772 | 0.683 | 0.626 | 0.594 | 0.955 | 0.633 | 0.541 | 0.046 |
+| 2020-AAAI-PCSA | 0.772 | 0.819 | 0.759 | 0.636 | 0.566 | 0.560 | 0.935 | 0.585 | 0.479 | 0.057 |
+| 2020-MICCAI-23DCNN | 0.849 | 0.917 | 0.869 | 0.805 | 0.753 | 0.726 | 0.971 | 0.764 | 0.671 | 0.035 |
+| 2021-ICCV-DCFNet | 0.603 | 0.640 | 0.602 | 0.427 | 0.385 | 0.467 | 0.740 | 0.411 | 0.340 | 0.135 |
+| 2021-NIPS-AMD | 0.480 | 0.528 | 0.536 | 0.124 | 0.115 | 0.250 | 0.576 | 0.129 | 0.079 | 0.171 |
+| PraNet | 0.884 | 0.930 | 0.919 | 0.865 | 0.831 | 0.816 | 0.974 | 0.839 | 0.766 | 0.031 |
+| ACSNet | 0.872 | 0.919 | 0.910 | 0.835 | 0.806 | 0.814 | 0.975 | 0.820 | 0.748 | 0.036 |
+| SANet | 0.874 | 0.924 | 0.905 | 0.844 | 0.810 | 0.801 | 0.969 | 0.820 | 0.748 | 0.033 |
+| **SEPNet** | **0.894** | **0.943** | **0.940** | **0.870** | **0.835** | **0.852** | **0.979** | **0.857** | **0.776** | **0.034** |
+
+### TestHardDataset / Unseen
+
+| Method | Smeasure | adpEm | meanEm | meanFm | wFmeasure | meanSen | meanSpe | meanDice | meanIoU | MAE |
+|-------|----------|-------|--------|--------|-----------|---------|---------|----------|---------|-----|
+| 2019-TPAMI-COSNet | 0.670 | 0.825 | 0.627 | 0.506 | 0.443 | 0.380 | 0.851 | 0.438 | 0.353 | 0.070 |
+| 2020-AAAI-PCSA | 0.682 | 0.792 | 0.660 | 0.510 | 0.442 | 0.415 | 0.871 | 0.450 | 0.351 | 0.080 |
+| 2020-MICCAI-23DCNN | 0.786 | 0.843 | 0.775 | 0.688 | 0.634 | 0.607 | 0.921 | 0.644 | 0.558 | 0.044 |
+| 2021-ICCV-DCFNet | 0.514 | 0.556 | 0.522 | 0.303 | 0.263 | 0.364 | 0.615 | 0.290 | 0.225 | 0.185 |
+| 2021-NIPS-AMD | 0.472 | 0.578 | 0.527 | 0.141 | 0.128 | 0.213 | 0.551 | 0.135 | 0.086 | 0.183 |
+| PraNet | 0.787 | 0.848 | 0.802 | 0.726 | 0.667 | 0.627 | 0.931 | 0.675 | 0.587 | 0.053 |
+| ACSNet | 0.762 | 0.799 | 0.776 | 0.657 | 0.610 | 0.600 | 0.852 | 0.624 | 0.547 | 0.053 |
+| SANet | 0.753 | 0.817 | 0.736 | 0.633 | 0.590 | 0.562 | 0.856 | 0.595 | 0.527 | 0.055 |
+| **SEPNet** | **0.847** | **0.902** | **0.895** | **0.791** | **0.745** | **0.776** | **0.953** | **0.774** | **0.684** | **0.039** |
+
+
 
 ## 🤝 FAQ
 
