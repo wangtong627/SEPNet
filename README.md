@@ -14,7 +14,7 @@
 [![Dataset](https://img.shields.io/badge/Dataset-Google%20Drive-2C786C)](https://drive.google.com/drive/folders/1y1T-2mF4d4x_05S-fR8z-t3N1Xl5Zz7V?usp=sharing)
 [![Checkpoint](https://img.shields.io/badge/Checkpoint-OneDrive-orange)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/ET9u--Dah4JMhKeeJb9dGqcBd6kC9Vx1rSREPq7RqU5qzQ?e=GYPNCN)
 [![Prediction Maps](https://img.shields.io/badge/Prediction_Maps-OneDrive-purple)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/EXz63_SesOxLh6VKyIDdLJQBd5pp0987i5qVijbH4KIG4w?e=rjQB7d)
-</p>
+<br>
 [![SUN-SEG Checkpoint](https://img.shields.io/badge/SUN--SEG_Checkpoint-OneDrive-orange)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDHwJcR4jysT7BhUd0MIcOkAYcoMrzVWPI6zjHO63k71UA?e=IeaZ5T)
 [![SUN-SEG Prediction Maps](https://img.shields.io/badge/SUN--SEG_Prediction_Maps-OneDrive-purple)](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBSSR0AxkqHR4ElpmvRPFhRAbSwULSzdD8-Fcfa5mXpeeg?e=YEtapl)
 
